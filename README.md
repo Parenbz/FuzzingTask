@@ -1,6 +1,6 @@
 # FuzzingTask
 
-Фаззинг https://github.com/dariomanesku/cmft/tree/master для .dds файлов на Linux_x64. Бинарник собран с CC=afl-clang-fast CXX=afl-clang-fast++, с Address Sanitizer. 
+Фаззинг [cmft](https://github.com/dariomanesku/cmft/tree/master) для .dds файлов на Linux_x64. Бинарник собран с CC=afl-clang-fast CXX=afl-clang-fast++, с Address Sanitizer. 
 
 Подключение кастомных мутаторов:
 ```
