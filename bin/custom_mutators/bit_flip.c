@@ -83,6 +83,10 @@ size_t afl_custom_fuzz(bit_flip_mutator_t *data, uint8_t *buf, size_t buf_size, 
         data->mutated_out[rand() % (buf_size - 2) + 2] ^= flip1bit_mask[rand() % 8];
     }
 
+    if (mutated_size > max_size) {
+        mutated_size = max_size;
+    }
+
     *out_buf = data->mutated_out;
     return mutated_size;
 }

@@ -52,6 +52,10 @@ size_t afl_custom_fuzz(arithmetics_mutator_t *data, uint8_t *buf, size_t buf_siz
         }
     }
 
+    if (mutated_size > max_size) {
+        mutated_size = max_size;
+    }
+
     *out_buf = data->mutated_out;
     return mutated_size;
 }
